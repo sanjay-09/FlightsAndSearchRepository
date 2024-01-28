@@ -50,6 +50,16 @@ class flightService{
             return err;
         }
     }
+    async updateFlight(data,flightId){
+        try{
+            const response=await this.flightRepository.updateFlight(data,flightId);
+            return response;
+
+        }
+        catch(err){
+            throw err;
+        }
+    }
 
 
 

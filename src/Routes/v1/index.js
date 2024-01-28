@@ -37,6 +37,7 @@ router.patch("/airport/:id",airportController.update)
 router.post("/flight",middleware.validateCreateFlight,flightController.create);
 router.get("/flight/:id",flightController.get);
 router.get("/flight",flightController.getall);
+router.patch("/flightUpdate/:id",flightController.updateFlight)
 
 
 

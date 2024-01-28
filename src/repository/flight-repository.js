@@ -69,12 +69,28 @@ class flightRepository{
             const response=await Flights.findAll({
                 where:filterData
             })
+            console.log(response);
             return response;
 
         }
         catch(err){
 
             return err;
+        }
+    }
+    async updateFlight(data,flightId){
+        try{
+            await Flights.update(data,{
+                where:{
+                    id:flightId
+                }
+            })
+            return true;
+
+        }
+        catch(err){
+            throw err;
+
         }
     }
 
