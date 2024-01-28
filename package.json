@@ -15,7 +15,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:create:production": "env NODE_ENV=production npx sequelize db:create"
   },
   "author": "",
   "license": "ISC",
