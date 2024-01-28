@@ -6,6 +6,8 @@ const FlightService=new flightService();
 
 const create=async(req,res)=>{
     try{
+        console.log("j")
+        console.log(req.body);
         const response=await FlightService.createFlight(req.body);
         return res.status(successfullErrorCodes.CREATED).json({
             data:response,

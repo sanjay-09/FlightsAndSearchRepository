@@ -1,9 +1,12 @@
 const {clientErrorCodes}=require("../utils/error-codes");
 
-const validateCreateFlight=(req,res)=>{
+const validateCreateFlight=(req,res,next)=>{
+    console.log(req.body);
     if(
-        !req.body.flightNumber || !req.body.airplaneId || req.body.depatureAirportId || req.body.destinationAirportId || ! req.body.arrivalTime || ! req.body.departureTime || req.body.price)
+        !req.body.flightNumber || !req.body.airplaneId || !req.body.depatureAirportId || !req.body.destinationAirportId || ! req.body.arrivalTime || ! req.body.departureTime || !req.body.price)
     {
+       
+     
         return res.status(clientErrorCodes.BAD_REQ).json({
             data:{},
             status:false,
