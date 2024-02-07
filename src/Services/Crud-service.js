@@ -1,10 +1,12 @@
+
 class CrudService{
     constructor(respository){
         this.respository=respository;
     }
     async create(data){
         try{
-            const result=await this.respository.create(data);
+              console.log("inside crud service")
+            const result=await this.respository.create(data)
             return result;
 
         }

@@ -1,16 +1,19 @@
-const repository = require(".");
+
 
 class CrudRepository{
     constructor(model){
-        this.model=model;
+          this.model=model;
+          console.log(this.model);
     }
     async create(data){
         try{
+           
             const result=await this.model.create(data);
             return result;
 
         }
         catch(err){
+            console.log(err);
             throw err;
         }
     }

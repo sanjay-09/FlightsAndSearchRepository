@@ -70,8 +70,6 @@ const getall=async(req,res)=>{
 }
 const updateFlight=async(req,res)=>{
     try{
-        console.log(req.body);
-        console.log(req.params.id);
        const response=await FlightService.updateFlight(req.body,req.params.id);
        return res.status(200).json({
         data:response,

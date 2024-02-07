@@ -12,43 +12,37 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-   await queryInterface.bulkInsert("Airplanes",[
-
+   await queryInterface.bulkInsert("Seats",[
     {
-      modelNumber:"Airbus A320",
-      capacity:400,
-      createdAt:new Date(),
-      updatedAt:new Date()
-
-    },
-    {
-      modelNumber:"Boeing 737",
-      capacity:300,
-      createdAt:new Date(),
-      updatedAt:new Date()
-
-    },
-    {
-      modelNumber:"Boeing 777",
-      capacity:350,
+      seatNumber:6,
+      flightId:1,
       createdAt:new Date(),
       updatedAt:new Date()
     },
     {
-      modelNumber:"Boeing 747",
-      capacity:450,
+      seatNumber:7,
+      flightId:1,
       createdAt:new Date(),
       updatedAt:new Date()
     },
     {
-      modelNumber:"Airbus A330",
-      capacity:200,
+      seatNumber:8,
+      flightId:1,
       createdAt:new Date(),
       updatedAt:new Date()
-    
+    },
+    {
+      seatNumber:9,
+      flightId:1,
+      createdAt:new Date(),
+      updatedAt:new Date()
+    },
+    {
+      seatNumber:10,
+      flightId:1,
+      createdAt:new Date(),
+      updatedAt:new Date()
     }
-
-  
    ])
   },
 
