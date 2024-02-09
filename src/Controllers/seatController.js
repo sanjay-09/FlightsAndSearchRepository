@@ -34,6 +34,7 @@ const getSeat=async(req,res)=>{
 const updateSeat=async(req,res)=>{
     try{
         console.log(req.body);
+        console.log(typeof(req.body.flightId));
         const response=await seatServiceObj.updateSeat(req.body);
         return res.status(200).json({
             data:response,

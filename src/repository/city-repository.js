@@ -97,6 +97,7 @@ class cityRepository{
         try{
             
           for(let city of data){
+          
             
                 await City.create({name:city});
             
