@@ -17,7 +17,7 @@ class flightService{
             }
             
             const airplane=await this.AirplaneRespository.getAirplane(data.airplaneId);
-            console.log(airplane.capacity)
+         
             const flight=await this.flightRepository.createFlight(
                 {
                     ...data,totalSeats:airplane.capacity
