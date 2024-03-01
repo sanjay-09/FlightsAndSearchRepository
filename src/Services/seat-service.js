@@ -15,7 +15,11 @@ class seatService extends CrudService{
            if(!response){
                 throw new Error("this seat is not avaiable");
            }
-            if(response.isBooked=="false"){
+           const seatAvaiable=response.isBooked;
+           console.log("first",seatAvaiable);
+           await seatRespositoryObject.updateSeat(data);
+           console.log("second",seatAvaiable);
+            if(seatAvaiable==="false"){
                 return true;
             }
             else{
